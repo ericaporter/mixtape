@@ -4,7 +4,12 @@ class TracksController < ApplicationController
   # GET /tracks
   # GET /tracks.json
   def index
-    @tracks = current_user.tracks
+    # @tracks = current_user ? current_user.tracks : []  
+    if (current_user) 
+      @tracks = current_user.tracks
+    else 
+      @tracks = []
+    end
   end
 
   # GET /tracks/1
