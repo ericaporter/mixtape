@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-12 columns play-track"> 
+    <h1>Play Audio</h1>
+    <div 
+      class="play-square" 
+      style="background-image: url(<%= @track.track_image.detail.url %>); background-repeat: no-repeat"
+    >
+    </div>
+  </div>
+  <div class="track-info small-12 columns">
+    <p class="small-6"><%= @track.title %></p>
+    <p class="small-6"><%= @track.user_id %></p>
+  </div>
+  <div class="small-12 columns">
+    <audio 
+      controls
+      src="<%=@track.audio_track.url %>" 
+    >
+    </audio>
+    <%= @track.tag_id %>
+  </div>
+</div>

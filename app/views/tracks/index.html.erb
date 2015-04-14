@@ -15,6 +15,14 @@
 
   <tbody>
     <% @tracks.each do |track| %>
+      <!-- table row with card-style track details -->
+      <tr>
+        <% @track = track %>
+        <%= render 'track_details' %>
+      </tr>
+      <!-- end card-style -->
+
+      <!-- table row with table-style details -->
       <tr>
         <td><%= track.title %></td>
         <td><%= track.user_id %></td>
@@ -22,9 +30,14 @@
         <td><%= image_tag track.track_image.url %></td>
         <td><%= track.audio_track %></td>
         <td><%= link_to 'Show', track %></td>
-        <td><%= link_to 'Edit', edit_track_path(track) %></td>
-        <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <% if current_user && current_user.id == track.user_id %>
+          <td><%= link_to 'Edit', edit_track_path(track) %></td>
+          <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
+      <!-- end table-style -->
+      
     <% end %>
   </tbody>
 </table>
