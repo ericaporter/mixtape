@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   has_many :tracks
   has_many :comments
 
-  mount_uploader :profile_pic, ProfilePicUploader
+  mount_uploader :photo, ProfilePicUploader
   
 
   # Include default devise modules. Others available are:
