@@ -4,7 +4,7 @@ class TracksController < ApplicationController
   # GET /tracks
   # GET /tracks.json
   def index
-    @tracks = Track.all
+    @tracks = current_user.tracks
   end
 
   # GET /tracks/1
@@ -24,7 +24,7 @@ class TracksController < ApplicationController
   # POST /tracks
   # POST /tracks.json
   def create
-    @track = Track.new(track_params)
+    @track = current_user.tracks.new(track_params)
 
     respond_to do |format|
       if @track.save
