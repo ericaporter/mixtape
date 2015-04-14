@@ -17,7 +17,12 @@
 
 <p>
   <strong>Track image:</strong>
-  <%= image_tag @track.track_image.urlm,,,,,,,, %>
+  <%= image_tag @track.track_image.url %>
+</p>
+
+<p>
+  <strong>Audio track:</strong>
+  <%= audio_tag @track.audio_track %>
 </p>
 
 <%= link_to 'Edit', edit_track_path(@track) %> |

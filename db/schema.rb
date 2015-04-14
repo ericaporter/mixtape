@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20150414091212) do
     t.text     "track_image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "audio_track"
+    t.text     "audio_track"
   end
 
   create_table "users", force: :cascade do |t|
