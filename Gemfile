@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'foundation-rails'
 gem 'carrierwave', '0.10.0'
+gem 'cancancan', '~> 1.10'
+gem 'rmagick'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

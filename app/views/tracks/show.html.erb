@@ -23,7 +23,10 @@
 <p>
   <strong>Audio track:</strong>
   <%= audio_tag @track.audio_track %>
-</p>
+  <audio src="<%=@track.audio_track.url %>" controls
+  </audio>
+
+ </p>
 
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %>
