@@ -1,12 +1,8 @@
-class User < ActiveRecord::Base
-  
+class User < ActiveRecord::Base  
   has_many :tracks
   has_many :comments, through: :tracks
-  
 
   mount_uploader :photo, ProfilePicUploader
-
-  
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

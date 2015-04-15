@@ -12,8 +12,9 @@
     <p> tags: <%= @track.tag_list %></p>
     <p class="small-6"><%= @track.user.try(:username) %></p>
   </div>
+  
   <div class="small-12 columns">
-    <audio controls src="<%=@track.audio_track.url %>"</audio>
+    <audio controls src="<%= @track.audio_track.url %>"></audio>
     <%= @track.tag_id %>
   </div>
 

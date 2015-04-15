@@ -2,38 +2,12 @@
 
 <h1>Listing Tracks</h1>
 <div id="tag_cloud">
-<% tag_cloud Track.tag_counts, %w[s m l] do |tag, css_class| %>
-<%= link_to tag.name, tag_path(tag.name), class: css_class %>
-
-<% end %>
+  <% tag_cloud Track.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
 </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Tags</th>
-      <th>User</th>
-      <th>Tag</th>
-      <th>Track image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  
-  <tbody>
-    <% @tracks.each do |track| %>
-      <!-- table row with card-style track details -->
-      <tr>
-        <% @track = track %>
-        <%= render 'track_details' %>
-      </tr>
-      <!-- end card-style -->
-
-
-      
-    <% end %>
-  </tbody>
-</table>
+<%= render @tracks %>
 
 <br>
 

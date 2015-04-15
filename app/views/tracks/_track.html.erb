@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-12 columns play-track"> 
+    <h1><%= link_to track.title, track %></h1>
+    <p><%= track.user.try(:username) %></p>
+    <div class="play-square" 
+      style="background-image: url(<%= track.track_image.detail.url %>); background-repeat: no-repeat">
+    </div>
+  </div>
+</div>
