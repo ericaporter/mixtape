@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Tags</th>
       <th>User</th>
       <th>Tag</th>
       <th>Track image</th>
@@ -25,6 +26,7 @@
       <!-- table row with table-style details -->
       <tr>
         <td><%= track.title %></td>
+        <td><p><%= track.tag_list %></p></td>
         <td><%= track.user_id %></td>
         <td><%= track.tag_id %></td>
         <td><%= image_tag track.track_image.url %></td>

@@ -5,6 +5,7 @@ gem 'foundation-rails'
 gem 'carrierwave', '0.10.0'
 gem 'cancancan', '~> 1.10'
 gem 'rmagick'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
