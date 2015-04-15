@@ -22,7 +22,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Foundation</h1>
+        <h1 class="title">Mixtape</h1>
       </section>
 
       <section class="right-small">
@@ -32,19 +32,19 @@
 
     <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>Foundation</label></li>
+        <li><label>Menu</label></li>
+        <li><%= link_to "Upload Track", new_track_path %></li>
         <li><%= link_to "Tracks", tracks_path %></li>
-        <li><%= link_to "New Track", new_track_path %></li>
+
       </ul>
     </aside>
 
     <aside class="right-off-canvas-menu">
       <ul class="off-canvas-list">
-        <li><label>Users</label></li>
+        <li><label>My Options</label></li>
         <% if current_user %>
-          <li><%= current_user.email %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
           <li><%= link_to "My Tracks", my_tracks_path%></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><%= link_to "Sign In", new_user_session_path %></li>
           <li><%= link_to "Register", new_user_registration_path %></li>

@@ -20,6 +20,12 @@
   max-width: 400px;
 }*/
 
+h1.title {
+  color: (255,255,255);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 30px; 
+}
+
 .play-square {
   min-height: 400px;
   min-width: 400px;
