@@ -1,0 +1,3 @@
+<li><%= comment.comment %></li>
+<li><%= comment.user.try(:username) %></li>
+<td><%= link_to 'Remove', comment_path(comment, commentable_type: commentable.class, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
