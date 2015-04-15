@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root to: "statics#home"
 
 
-
+  # added by terrifying gerry
+  get "/my_tracks", to: "tracks#index", my_tracks: true
 end

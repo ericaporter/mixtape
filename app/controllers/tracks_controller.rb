@@ -5,10 +5,10 @@ class TracksController < ApplicationController
   # GET /tracks.json
   def index
     # @tracks = current_user ? current_user.tracks : []  
-    if (current_user) 
-      @tracks = current_user.tracks
+    @tracks = if params[:my_tracks]
+       current_user.tracks
     else 
-      @tracks = []
+      Track.all
     end
   end
 

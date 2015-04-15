@@ -1,6 +1,6 @@
 class Track < ActiveRecord::Base
   acts_as_taggable
-  has_many :tags
+  #has_many :tags
   belongs_to :user
   has_many :comments
 
