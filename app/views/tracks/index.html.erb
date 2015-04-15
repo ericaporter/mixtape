@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Tracks</h1>
+<div id="tag_cloud">
+<% tag_cloud Track.tag_counts, %w[s m l] do |tag, css_class| %>
+<%= link_to tag.name, tag_path(tag.name), class: css_class %>
+
+<% end %>
+</div>
 
 <table>
   <thead>
@@ -13,7 +19,7 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+  
   <tbody>
     <% @tracks.each do |track| %>
       <!-- table row with card-style track details -->
@@ -23,22 +29,7 @@
       </tr>
       <!-- end card-style -->
 
-      <!-- table row with table-style details -->
-      <tr>
-        <td><%= track.title %></td>
-        <td><p><%= track.tag_list %></p></td>
-        <td><%= track.user_id %></td>
-        <td><%= track.tag_id %></td>
-        <td><%= image_tag track.track_image.url %></td>
-        <td><%= track.audio_track %></td>
-        <td><%= link_to 'Show', track %></td>
-        
-        <% if current_user && current_user.id == track.user_id %>
-          <td><%= link_to 'Edit', edit_track_path(track) %></td>
-          <td><%= link_to 'Destroy', track, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
-      </tr>
-      <!-- end table-style -->
+
       
     <% end %>
   </tbody>
@@ -47,3 +38,5 @@
 <br>
 
 <%= link_to 'New Track', new_track_path %>
+
+
