@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :tracks
-  has_many :comments
+  has_many :comments, through: :tracks
 
   mount_uploader :photo, ProfilePicUploader
   
