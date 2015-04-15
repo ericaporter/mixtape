@@ -13,25 +13,56 @@
 </head>
 
 <body>
+<header>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
 
-  <nav>
-    <ul>
-      <li><%= link_to "Tracks", tracks_path %></li>
-      <li><%= link_to "New Track", new_track_path %></li>
-    </ul>
-  </nav>
+      <section class="middle tab-bar-section">
+        <h1 class="title">Foundation</h1>
+      </section>
 
-  <div class='login'>
-    <% if current_user %>
-    <%= current_user.email %>
-    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <% else %>
-    <%= link_to "Sign In", new_user_session_path %>
-    <%= link_to "Register", new_user_registration_path %>
-    <% end %>
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Foundation</label></li>
+        <li><%= link_to "Tracks", tracks_path %></li>
+        <li><%= link_to "New Track", new_track_path %></li>
+      </ul>
+    </aside>
+
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li><label>Users</label></li>
+        <% if current_user %>
+          <li><%= current_user.email %></li>
+          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "Sign In", new_user_session_path %></li>
+          <li><%= link_to "Register", new_user_registration_path %></li>
+        <% end %>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+      <!-- content goes here -->
+        <main class="row">
+          <%= yield %>
+        </main>
+      </section>
+
+    <a class="exit-off-canvas"></a>
+
+    </div>
   </div>
-
-  <%= yield %>
+  </header>
 
 </body>
 </html>
