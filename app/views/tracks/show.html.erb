@@ -4,7 +4,7 @@
   <div class="small-12 columns play-track"> 
     <h1>Tracks</h1>
     <div class="play-square" 
-    style="background-image: url(<%= @track.track_image.detail.url %>); background-repeat: no-repeat">
+    style="background-image: url(<%= @track.track_image.detail.url %>); background-repeat: no-repeat" data-url="<%= @track.audio_track.url %>">
   </div>
 </div>
 <div class="track-info small-12 columns">
