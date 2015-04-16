@@ -29,20 +29,14 @@ main  {
 .row {
   margin: 0 auto;
 }
-.main.section {
-  align: center;
-}
 
-h1.title {
-  color: (255,255,255);
-  font-family: 'Gloria Hallelujah', cursive;
-  font-size: 30px;
-  align: center;  
-}
+/*.main.section {
+  align: center;
+}*/
 
 h1{
-  font-family: 
-  font-size: 20px;
+  font-size: 40px;
+  font-family: 'Kalam', cursive;
 }
 
 div.play-square {
@@ -50,18 +44,27 @@ div.play-square {
   min-width: 400px;
   background-size: 400px 400px;
   text-align: center;
-  margin: 0 auto;
+  margin-left: 300px;
 }
 
-/*.small-12 columns {
-  position: left;
-}*/
-
-.track-info > p {
-  display: inline-block;
-  float: left;
+label {
+  font-family:'Kalam', cursive;
+  height: 40px;
 }
 
-.track-info > p:last-of-type {
-  text-align: right;
+a{
+  font-family:'Kalam', cursive;
+  font-size: 20px;
 }
+
+.tab-bar {
+  background: rgb(32,32,32) ;
+  height: 50px;
+}
+
+.tab-bar left-off-canvas-toggle menu-icon {
+  height: 70px;
+  width: 50px;
+}
+
+

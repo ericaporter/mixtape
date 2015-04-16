@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require soundmanager2
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
