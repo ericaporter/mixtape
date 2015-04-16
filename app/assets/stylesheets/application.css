@@ -16,9 +16,6 @@
 
  */
 
-/*body {
-  max-width: 400px;
-}*/
 
 main  {
   max-width: 600px;
@@ -30,13 +27,14 @@ main  {
   margin: 0 auto;
 }
 
-/*.main.section {
-  align: center;
-}*/
+h1 {
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+}
 
-h1{
-  font-size: 40px;
-  font-family: 'Kalam', cursive;
+p {
+  font-family: 'Arvo', serif;
 }
 
 div.play-square {
@@ -47,24 +45,40 @@ div.play-square {
   margin-left: 300px;
 }
 
-label {
-  font-family:'Kalam', cursive;
-  height: 40px;
+
+.l {
+  font-family: 'Arvo', serif;
+  font-size: 70px;
+  line-height: 50px;
+  padding-top: 20px;
+  color: #682860;
 }
 
-a{
-  font-family:'Kalam', cursive;
-  font-size: 20px;
+a {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 30px;
 }
 
-.tab-bar {
+nav.tab-bar {
   background: rgb(32,32,32) ;
-  height: 50px;
+  height: 60px;
 }
 
 .tab-bar left-off-canvas-toggle menu-icon {
   height: 70px;
   width: 50px;
+}
+
+h2{
+  font-family: 'Architects Daughter', cursive;
+  font-size: 50px;
+  padding-top: 100px;
+}
+
+h3 {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 45px;
+  padding-top: 30px;
 }
 
 

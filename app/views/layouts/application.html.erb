@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href='http://fonts.googleapis.com/css?family=Kalam' rel='stylesheet' type='text/css'>
-  <title><%= content_for?(:title) ? yield(:title) : "Mixtape" %></title>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://i.icomoon.io/public/temp/a6d01971a8/UntitledProject/style.css">
 
+  <title><%= content_for?(:title) ? yield(:title) : "Mixtape" %></title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "vendor/modernizr" %>
   <%= javascript_include_tag "application" %>
@@ -22,7 +24,7 @@
       </section>
 
       <section class="middle tab-bar-section">
-        <h1 class="title">Mixtape</h1>
+        <h1 class="title"><span class="icon-cassette"></span>Mixtape</h1>
       </section>
 
       <section class="right-small">
