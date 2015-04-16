@@ -54,9 +54,15 @@ div.play-square {
   color: #682860;
 }
 
-a {
+row a {
   font-family: 'Architects Daughter', cursive;
-  font-size: 30px;
+  font-size: 25px;
+}
+
+
+a {
+  font-family:'Architects Daughter', cursive;
+  font-size: 25px;
 }
 
 nav.tab-bar {
@@ -64,10 +70,6 @@ nav.tab-bar {
   height: 60px;
 }
 
-.tab-bar left-off-canvas-toggle menu-icon {
-  height: 70px;
-  width: 50px;
-}
 
 h2{
   font-family: 'Architects Daughter', cursive;
@@ -80,5 +82,10 @@ h3 {
   font-size: 45px;
   padding-top: 30px;
 }
+
+p.small
+
+    </div>
+  </div>
 
 

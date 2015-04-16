@@ -2,22 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#tag_cloud {
-  width: 400px;
-  line-height: 1.6em;
-  .s { font-size: 0.8em; }
-  .m { font-size: 1.2em; }
-  .l { font-size: 1.8em; }
-  padding-top: 20px;
-  margin-left: 300px;
-  font-family: 'Architects Daughter', cursive;
-}
-
 .track-info > p {
   display: inline-block;
   float: left;
+  margin-right: 50px;
+  font-family: 'Architects Daughter', cursive;
+  padding-top: 20px;
+  line-height: 30px;
+
+
 }
 
 .track-info > p:last-of-type {
-  text-align: right;
+  text-align: left;
+  margin-top: -40px;
+  margin-left: -430px;
+  color: #682860;
+  font-size: 20px;
 }
+
+p.small-6 {
+  margin-left: 250px;
+  color: black;
+  padding-top: 10px;
+}
+
+audio {
+  margin-top: 10px;
+}
+
+

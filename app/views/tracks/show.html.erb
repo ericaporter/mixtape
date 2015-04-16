@@ -6,12 +6,15 @@
     <div class="play-square" 
     style="background-image: url(<%= @track.track_image.detail.url %>); background-repeat: no-repeat" data-url="<%= @track.audio_track.url %>">
   </div>
+  <div class="small-12 columns">
+    <audio controls src="<%= @track.audio_track.url %>"></audio>
+    <%= @track.tag_id %>
+  </div>
 </div>
 <div class="track-info small-12 columns">
-  <p class="small-6"><%= @track.title %></p>
-  <p> tags: <%= @track.tag_list %></p>
-  <p class="small-6"><%= @track.user.try(:username) %></p>
-
+  <p class="small-6">Track title: <%= @track.title %></p>
+  <p class="small-6">Artist name: <%= @track.user.try(:username) %></p>
+  <p> Tags: <%= @track.tag_list %></p>
 </div>
 
 <ul>
@@ -23,10 +26,6 @@
 <%= link_to 'Delete', @track, method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
 
 
-<div class="small-12 columns">
-  <audio controls src="<%= @track.audio_track.url %>"></audio>
-  <%= @track.tag_id %>
-</div>
 
 <%= render partial: 'comments/form', locals: { commentable: @track } %>
 
