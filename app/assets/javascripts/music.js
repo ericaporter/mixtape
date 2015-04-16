@@ -5,17 +5,24 @@ mixtapePlayer.setup = function(){
   $('.play-square').on('click', mixtapePlayer.playSound);
 }
 
-mixtapePlayer.playSound = function(){
+mixtapePlayer.playPause = function(){
   event.preventDefault();
   var filename = $(this).data('url');
-  var sound = mixtapePlayer.getSound(filename);
-  sound.play();
-  mixtapePlayer._currentSound = null;
+  if(playPause) {
+    var sound = mixtapePlayer.getSound(filename);
+    sound.play();
+  }
+  else {
+    sound.pause();
+    $('#playbutton').html('&#9654;').data('state', 'paused');
+    mixtapePlayer._currentSound = null;
+}
 }
 
-
-
-
+// myPlayer.pause = function() {
+//   
+//   $('#playbutton').html('&#9654;').data('state', 'paused');
+// }
 
 mixtapePlayer.getSound = function(filename){
   if (!mixtapePlayer._currentSound) {

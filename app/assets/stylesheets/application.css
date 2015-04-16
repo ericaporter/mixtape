@@ -35,7 +35,7 @@ main  {
 
 h1.title {
   color: (255,255,255);
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 30px;
   align: center;  
 }
@@ -52,6 +52,10 @@ div.play-square {
   text-align: center;
   margin: 0 auto;
 }
+
+/*.small-12 columns {
+  position: left;
+}*/
 
 .track-info > p {
   display: inline-block;
