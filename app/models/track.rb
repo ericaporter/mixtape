@@ -9,4 +9,6 @@ class Track < ActiveRecord::Base
 
   mount_uploader :track_image, TrackImageUploader
   mount_uploader :audio_track, AudioTrackUploader
+
+
 end

@@ -7,6 +7,8 @@ class TracksController < ApplicationController
     # @tracks = current_user ? current_user.tracks : []  
     @tracks = if params[:my_tracks]
        current_user.tracks
+     elsif params[:tag]
+         Track.tagged_with params[:tag]
     else 
       Track.all
     end
