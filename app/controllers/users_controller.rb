@@ -17,9 +17,12 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  # GET /users/1/edit
-  def edit
-  end
+  #to check if a given user can edit an item #defines what the users are allowed to do
+
+  # GET /users/1/edit 
+  # def edit  
+  #   authorize! :edit, @item
+  # end
 
   # POST /users
   # POST /users.json

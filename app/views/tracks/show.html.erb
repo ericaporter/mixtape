@@ -1,4 +1,33 @@
-<%= render 'track_details' %>
+
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-12 columns play-track"> 
+    <h1>Tracks</h1>
+    <div class="play-square" 
+    style="background-image: url(<%= @track.track_image.detail.url %>); background-repeat: no-repeat">
+  </div>
+</div>
+<div class="track-info small-12 columns">
+  <p class="small-6"><%= @track.title %></p>
+  <p> tags: <%= @track.tag_list %></p>
+  <p class="small-6"><%= @track.user.try(:username) %></p>
+
+</div>
+
+<ul>
+  <%= render partial: 'comments/comment', collection: @track.comments, locals: { commentable: @track } %>
+</ul>
+
 <%= link_to 'Edit', edit_track_path(@track) %> |
 <%= link_to 'Back', tracks_path %> |
 <%= link_to 'Delete', @track, method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
+
+
+<div class="small-12 columns">
+  <audio controls src="<%= @track.audio_track.url %>"></audio>
+  <%= @track.tag_id %>
+</div>
+
+<%= render partial: 'comments/form', locals: { commentable: @track } %>
+
+</div>

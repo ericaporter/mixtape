@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   validates :username, presence: true, uniqueness: true, length: { minimum: 2 }
   validates :email, presence: true, uniqueness: true
 
+  def admin?
+    self.role == "Admin"
+  end
+
 end

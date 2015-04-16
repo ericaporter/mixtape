@@ -20,16 +20,37 @@
   max-width: 400px;
 }*/
 
+main  {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+.row {
+  margin: 0 auto;
+}
+.main.section {
+  align: center;
+}
+
 h1.title {
   color: (255,255,255);
   font-family: 'Permanent Marker', cursive;
-  font-size: 30px; 
+  font-size: 30px;
+  align: center;  
 }
 
-.play-square {
+h1{
+  font-family: 
+  font-size: 20px;
+}
+
+div.play-square {
   min-height: 400px;
   min-width: 400px;
   background-size: 400px 400px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .track-info > p {
@@ -39,5 +60,4 @@ h1.title {
 
 .track-info > p:last-of-type {
   text-align: right;
-
 }
