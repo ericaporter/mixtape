@@ -5,18 +5,17 @@
 .track-info > p {
   display: inline-block;
   float: left;
-  margin-right: 50px;
+  margin-right: px;
   font-family: 'Architects Daughter', cursive;
   padding-top: 20px;
   line-height: 30px;
-
-
+  font-size: 20px;
 }
 
 .track-info > p:last-of-type {
   text-align: left;
   margin-top: -40px;
-  margin-left: -430px;
+  margin-left: -400px;
   color: #682860;
   font-size: 20px;
 }

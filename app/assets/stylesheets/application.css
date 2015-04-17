@@ -27,16 +27,6 @@ main  {
   margin: 0 auto;
 }
 
-h1 {
-  font-size: 50px;
-  font-family: 'Architects Daughter', cursive;
-  font-weight: bold;
-}
-
-p {
-  font-family: 'Arvo', serif;
-}
-
 div.play-square {
   min-height: 400px;
   min-width: 400px;
@@ -44,7 +34,6 @@ div.play-square {
   text-align: center;
   margin-left: 300px;
 }
-
 
 .l {
   font-family: 'Arvo', serif;
@@ -59,17 +48,16 @@ row a {
   font-size: 25px;
 }
 
-
-a {
-  font-family:'Architects Daughter', cursive;
-  font-size: 25px;
-}
-
 nav.tab-bar {
   background: rgb(32,32,32) ;
   height: 60px;
 }
 
+h1 {
+  font-size: 50px;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+}
 
 h2{
   font-family: 'Architects Daughter', cursive;
@@ -83,9 +71,16 @@ h3 {
   padding-top: 30px;
 }
 
-p.small
+p {
+  font-family: 'Arvo', serif;
+}
 
-    </div>
-  </div>
+a {
+  font-family:'Architects Daughter', cursive;
+  font-size: 25px;
+}
+
+
+
 
 

@@ -1,37 +1,37 @@
 <%= form_for(@track) do |f| %>
-  <% if @track.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@track.errors.count, "error") %> prohibited this track from being saved:</h2>
+<% if @track.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@track.errors.count, "error") %> prohibited this track from being saved:</h2>
 
-      <ul>
-      <% @track.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% @track.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :track_image %><br>
-    <%= f.file_field :track_image %>
-  </div>
-  <div class="field">
-    <%= f.label :remote_track_image_url %><br>
-    <%= f.text_field :remote_track_image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :audio_track %><br>
-    <%= f.file_field :audio_track %>
-  </div>
-  <div class="field">
-    <%= f.label :tag_list, "Tags (separated by commas)" %><br>
-    <%= f.text_field :tag_list %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :track_image %><br>
+  <%= f.file_field :track_image %>
+</div>
+<div class="field">
+  <%= f.label :remote_track_image_url %><br>
+  <%= f.text_field :remote_track_image_url %>
+</div>
+<div class="field">
+  <%= f.label :audio_track %><br>
+  <%= f.file_field :audio_track %>
+</div>
+<div class="field">
+  <%= f.label :tag_list, "Tags (separated by commas)" %><br>
+  <%= f.text_field :tag_list %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>
 <% end %>
